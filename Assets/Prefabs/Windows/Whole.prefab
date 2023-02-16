@@ -86,15 +86,15 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 5455472059415911355, guid: 0e6b38956ef952c4a82f113185918377, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -114.6
+      value: -20.9
       objectReference: {fileID: 0}
     - target: {fileID: 5455472059468973271, guid: 0e6b38956ef952c4a82f113185918377, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -101
+      value: -7.300049
       objectReference: {fileID: 0}
     - target: {fileID: 5455472059840475559, guid: 0e6b38956ef952c4a82f113185918377, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -144.3
+      value: -50.600037
       objectReference: {fileID: 0}
     - target: {fileID: 5455472059894626642, guid: 0e6b38956ef952c4a82f113185918377, type: 3}
       propertyPath: m_Pivot.x

@@ -52,6 +52,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9645433e1c5f537459753b072ca86e75, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isOpen: 0
 --- !u!1001 &1353291840743649926
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -475,6 +476,10 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
+    - target: {fileID: 4743589545118045157, guid: 4d701a1eaba4c8e4f913c434f8454b19, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 800
+      objectReference: {fileID: 0}
     - target: {fileID: 4743589545681826063, guid: 4d701a1eaba4c8e4f913c434f8454b19, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
       value: 1
@@ -569,7 +574,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4743589545965773110, guid: 4d701a1eaba4c8e4f913c434f8454b19, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 1000
+      value: 800
       objectReference: {fileID: 0}
     - target: {fileID: 4743589545965773110, guid: 4d701a1eaba4c8e4f913c434f8454b19, type: 3}
       propertyPath: m_SizeDelta.y

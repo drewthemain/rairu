@@ -11,9 +11,12 @@ public class Window : MonoBehaviour
 
     // The list of possible window orientations
     private List<GameObject> orientations = new List<GameObject>();
-
     // The current windown orientation
     private int currentWindowOrientation = 0;
+    // A collection of the window's header objects for easy resetting
+    private WindowHeader[] headers;
+    // Has the window been opened yet?
+    private bool isInit = false;
 
     private void Start()
     {
@@ -22,6 +25,9 @@ public class Window : MonoBehaviour
         {
             orientations.Add(window.gameObject);
         }
+
+        // Grabs all headers
+        headers = GetComponentsInChildren<WindowHeader>(true);
     }
 
     /// <summary>
@@ -32,6 +38,12 @@ public class Window : MonoBehaviour
         orientations[currentWindowOrientation].SetActive(false);
         currentWindowOrientation = currentWindowOrientation + 1 < orientations.Count ? currentWindowOrientation + 1 : 0;
         orientations[currentWindowOrientation].SetActive(true);
+
+        // If size is changed, reset positions
+        foreach (WindowHeader header in headers)
+        {
+            header.ResetPositions();
+        }
     }
 
     /// <summary>
@@ -46,6 +58,12 @@ public class Window : MonoBehaviour
         if (isExited)
         {
             currentWindowOrientation = 0;
+
+            // If window is fully closed, reset all headers for next opening
+            foreach (WindowHeader header in headers)
+            {
+                header.ResetPositions();
+            }
         }
         
         isOpen = !isExited;
@@ -59,5 +77,16 @@ public class Window : MonoBehaviour
         isOpen = true;
         orientations[currentWindowOrientation].SetActive(true);
         transform.SetAsLastSibling();
+
+        // Only when a window is first opened, initialize all of the headers
+        if (!isInit)
+        {
+            isInit = true;
+
+            foreach (WindowHeader header in headers)
+            {
+                header.Reset();
+            }
+        }
     }
 }
